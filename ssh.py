@@ -48,5 +48,5 @@ class Brute:
 
 try:
     Brute(host, port, username, pass_list).run()
-except:
-    pass
+except Exception as error:
+    raise error
