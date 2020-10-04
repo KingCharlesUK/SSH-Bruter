@@ -2,6 +2,8 @@ from colorama import Fore, Style, init
 import paramiko
 import sys
 
+init()
+
 try:
     host = sys.argv[1]
     port = sys.argv[2]
@@ -10,7 +12,6 @@ try:
 except IndexError:
     print(f'{Fore.LIGHTRED_EX}{Style.BRIGHT}python3 <host> <port> <username> <pass_list>')
 
-init()
 
 class Brute:
     def __init__(self, host, port, username, pass_list):
